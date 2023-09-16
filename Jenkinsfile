@@ -3,9 +3,9 @@ pipeline {
     stages {
         stage('deploy') {
             steps {
-              sh "aws configure set region $AWS_DEFAULT_REGION" 
-              sh "aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID"  
-              sh "aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY"
+              sh "AWS_DEFAULT_REGION=US East (N. Virginia) us-east-1" 
+              sh "AWS_ACCESS_KEY_ID=AKIAT37OMGXCY22PDCFE"  
+              sh "AWS_SECRET_ACCESS_KEY=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"
               sh "aws s3 cp Code/index.html s3://suvarna"
             }
         }
